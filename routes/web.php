@@ -23,10 +23,14 @@ Route::get('/{nrp}/{name}', function($nrp,$name) {
     echo "Hello". "nrp". $nrp. "nama".$nama;
 })->where('nrp', '[0-9]+') ->where('name', '[A-Za-z]+');
 
-Route::get('/cekbilangan/{bilangan}', function($bilangan) {
-    if($bilangan %2 == 0)
-        return "Bilangan tersebut Genap";
-    }else{
-        return "Bilangan tersebut Ganjil";
-    }
+
+Route :: get('/homepage', function () {
+    return view('home');
 });
+
+Route :: get('/homepage', function () {
+    return view('home' , ["name" => "Vinny Lindawaty"]);
+});
+
+Route :: get('/person', "PersonController@index"); 
+
