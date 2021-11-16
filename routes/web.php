@@ -34,3 +34,6 @@ Route :: get('/homepage', function () {
 
 Route :: get('/person', "PersonController@index"); 
 
+Route :: get('/person/add', 'PersonController@add');
+Route :: post('/person/addProcess', 'PersonController@addProcess');
+

@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> NRP :{{$code}} </h1>
-    <h1> Nama : {{$nama}} </h1>
-</body>
+    @extends("layouts.app")
+
+    @section("content")
+        <h1> NRP :  {{$code}} </h1>
+        <h1> Nama:  {{$name}} </h1>
+
+    @stop
 </html>
