@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+use Illuminate\Routing\Router;
+//memanggil file index yang ada pada folder barang
+Route::get('barang/','BarangController@index');
+//memanggil file add yang ada pada folder barang
+Route::get('barang/add','BarangController@add');
+Route::post('barang/addProcess','BarangController@addProcess');
 
 Route::get('/{name}/{nrp}', function($name,$nrp) {
     echo "Hello". "Nama". $name. "nrp".$nrp;
